@@ -1,0 +1,19 @@
+[package]
+name = "track-progress"
+authors = ["Ken Johnson <ken.johnso93@gmail.com>"]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+rust-version = "1.60"
+description = "Traits enable generic progress tracking from different crates"
+keywords = ["progress", "progressbar"]
+repository = "https://github.com/KenDJohnson/track-progress"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+indicatif = { version = "0.16", optional = true }
+
+[features]
+default = ["cli"]
+cli = ["indicatif"]
